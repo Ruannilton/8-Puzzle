@@ -1,0 +1,15 @@
+C:\Users\ruann\Desktop\8-puzzle\bin\Debug\net6.0\8-puzzle.exe
+C:\Users\ruann\Desktop\8-puzzle\bin\Debug\net6.0\8-puzzle.deps.json
+C:\Users\ruann\Desktop\8-puzzle\bin\Debug\net6.0\8-puzzle.runtimeconfig.json
+C:\Users\ruann\Desktop\8-puzzle\bin\Debug\net6.0\8-puzzle.dll
+C:\Users\ruann\Desktop\8-puzzle\bin\Debug\net6.0\ref\8-puzzle.dll
+C:\Users\ruann\Desktop\8-puzzle\bin\Debug\net6.0\8-puzzle.pdb
+C:\Users\ruann\Desktop\8-puzzle\obj\Debug\net6.0\8-puzzle.csproj.AssemblyReference.cache
+C:\Users\ruann\Desktop\8-puzzle\obj\Debug\net6.0\8-puzzle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ruann\Desktop\8-puzzle\obj\Debug\net6.0\8-puzzle.AssemblyInfoInputs.cache
+C:\Users\ruann\Desktop\8-puzzle\obj\Debug\net6.0\8-puzzle.AssemblyInfo.cs
+C:\Users\ruann\Desktop\8-puzzle\obj\Debug\net6.0\8-puzzle.csproj.CoreCompileInputs.cache
+C:\Users\ruann\Desktop\8-puzzle\obj\Debug\net6.0\8-puzzle.dll
+C:\Users\ruann\Desktop\8-puzzle\obj\Debug\net6.0\ref\8-puzzle.dll
+C:\Users\ruann\Desktop\8-puzzle\obj\Debug\net6.0\8-puzzle.pdb
+C:\Users\ruann\Desktop\8-puzzle\obj\Debug\net6.0\8-puzzle.genruntimeconfig.cache
