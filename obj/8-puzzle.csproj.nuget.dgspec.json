@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ruann\\Desktop\\8-puzzle\\8-puzzle.csproj": {}
+    "U:\\Dev\\Projects\\8-puzzle\\8-puzzle.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ruann\\Desktop\\8-puzzle\\8-puzzle.csproj": {
+    "U:\\Dev\\Projects\\8-puzzle\\8-puzzle.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ruann\\Desktop\\8-puzzle\\8-puzzle.csproj",
+        "projectUniqueName": "U:\\Dev\\Projects\\8-puzzle\\8-puzzle.csproj",
         "projectName": "8-puzzle",
-        "projectPath": "C:\\Users\\ruann\\Desktop\\8-puzzle\\8-puzzle.csproj",
+        "projectPath": "U:\\Dev\\Projects\\8-puzzle\\8-puzzle.csproj",
         "packagesPath": "C:\\Users\\ruann\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ruann\\Desktop\\8-puzzle\\obj\\",
+        "outputPath": "U:\\Dev\\Projects\\8-puzzle\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ruann\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,6 +37,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Raylib-cs": {
+              "target": "Package",
+              "version": "[4.0.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

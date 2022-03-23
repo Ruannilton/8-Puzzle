@@ -25,6 +25,7 @@ public abstract class Pathfinder<T> where T: IEqualityComparer<T>{
     protected List<PathNode> closedList = new();
 
     public delegate float CostFunction(T a, T b);
+    public delegate void GetProcessState(Node<T> current,List<Node<T>> neighbours,List<float> costs);
     protected CostFunction HeuristicCost { get; set; }
     protected CostFunction NodeTraversalCost { get; set; }
     public Status currentStatus = Status.Running;
@@ -46,6 +47,7 @@ public abstract class Pathfinder<T> where T: IEqualityComparer<T>{
 
         public int Compare(Pathfinder<T>.PathNode? x, Pathfinder<T>.PathNode? y)
         {
+            if(x == null || y == null) return 0;
             if(x.Fcost > y.Fcost) return 1;
             else if(x.Fcost < y.Fcost) return -1;
             return 0;
@@ -53,6 +55,7 @@ public abstract class Pathfinder<T> where T: IEqualityComparer<T>{
 
         public int CompareTo(PathNode? obj)
         {
+            if(obj == null) return 0;
            if(Fcost > obj.Fcost) return 1;
             else if(Fcost < obj.Fcost) return -1;
             return 0;
@@ -97,8 +100,9 @@ public abstract class Pathfinder<T> where T: IEqualityComparer<T>{
         return _goal.Equals(nodeV,_goal);
     } 
     
-    public Status Step(){
+    public Status Step(GetProcessState? logState = null){
 
+        if(currentNode == null) return currentStatus;
         AddCloseList(currentNode);
         
         if(openList.Count == 0) {currentStatus = Status.Fail; return currentStatus;}
@@ -108,12 +112,13 @@ public abstract class Pathfinder<T> where T: IEqualityComparer<T>{
         if(NodeIsGoal(currentNode)){currentStatus = Status.Sucess; return currentStatus;}
 
         List<Node<T>> neighbours = currentNode.value.GetNeighbours();
-
+        List<float> costs = new(neighbours.Count);
         foreach (var item in neighbours)
         {
-            FindAlgorithm(item);
+          float c = FindAlgorithm(item);
+          costs.Add(c);
         }
-       
+        if(logState!=null) logState(currentNode.value,neighbours,costs);
         currentStatus = Status.Running;
         return currentStatus;
     }
@@ -130,5 +135,5 @@ public abstract class Pathfinder<T> where T: IEqualityComparer<T>{
         path.Add(goal.value);
         return path;
     }
-    protected abstract void FindAlgorithm(Node<T> node);
+    protected abstract float FindAlgorithm(Node<T> node);
 }

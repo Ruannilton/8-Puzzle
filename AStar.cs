@@ -15,7 +15,7 @@ public class AStar : Pathfinder<Matrix3x3>
     {
     }
 
-    protected override void FindAlgorithm(Node<Matrix3x3> node)
+    protected override float FindAlgorithm(Node<Matrix3x3> node)
     {
         
 
@@ -34,6 +34,10 @@ public class AStar : Pathfinder<Matrix3x3>
                     openList[id].GCost = G;
                 }
             }
+
+            return G+H;
         }
+
+        return 0;
     }
 }
