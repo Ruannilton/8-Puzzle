@@ -97,8 +97,9 @@ Node<Matrix3x3>? searchCurrentNode = null;
 List<Node<Matrix3x3>> searchNeighboursNode = new();
 List<float> searchCosts = new();
 
-Raylib.InitWindow(1024, 480, "Hello World");
-
+Raylib.InitWindow(1024, 480, "Clube das Winx");
+WriteLine("Sei que vc vai querer ser");
+WriteLine("Uma de nos");
 void Reset(){
     steps = 0;
     random = new(new());
